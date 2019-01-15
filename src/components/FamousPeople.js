@@ -20,6 +20,11 @@ changeRole = (event) =>{
         role:event.target.value
 
     });
+savedActor = () =>{
+    console.log(this.state.name);
+    console.log(this.state.role);
+
+}
 }
 
     render(){
@@ -29,7 +34,9 @@ changeRole = (event) =>{
                     type="text" placeholder="Famous Persons Name" />
                     <input onChange={this.changeRole}
                     type="text" placeholder="Famous Persons Role" />
-                <p>{this.state.name} is famous for {this.state.role}</p>
+                    <button onClick = {this.savedActor} class="famous-button">Submit Artist</button>
+                    <p> {this.state.name} is famous for {this.state.role}</p>
+                
                 </div>
         );
     }
